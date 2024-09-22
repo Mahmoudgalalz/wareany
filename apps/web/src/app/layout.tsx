@@ -1,14 +1,6 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
-import { Dancing_Script, Playfair_Display } from 'next/font/google';
+import { Dancing_Script, Playfair_Display, Montserrat } from 'next/font/google';
 import './globals.css';
-import { NavBar } from '@/components/nav-bar';
-
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-});
 
 const dancingScript = Dancing_Script({
   subsets: ['latin'],
@@ -20,6 +12,12 @@ const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
   weight: '400',
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat-sans',
+  weight: ['400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {
@@ -35,9 +33,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable}  ${dancingScript.variable} ${playfair.variable} antialiased`}
+        className={`${montserrat.variable}  ${dancingScript.variable} ${playfair.variable} antialiased`}
       >
-        <NavBar />
         {children}
       </body>
     </html>

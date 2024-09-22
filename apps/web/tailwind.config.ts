@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss';
 import fluid, { extract, screens } from 'fluid-tailwind';
 
 const config: Config = {
+  darkMode: 'class',
   content: {
     files: [
       './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -19,7 +20,7 @@ const config: Config = {
         primary: 'var(--primary)',
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)'],
+        sans: ['var(--font-montserrat-sans)'],
         dancingScript: ['var(--font-dancing-script)'],
         playfair: ['var(--font-playfair)'],
       },
