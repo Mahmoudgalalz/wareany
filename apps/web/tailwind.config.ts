@@ -16,10 +16,10 @@ const config: Config = {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        primary: 'var(--primary)',
       },
       fontFamily: {
         sans: ['var(--font-geist-sans)'],
-        mono: ['var(--font-geist-mono)'],
         dancingScript: ['var(--font-dancing-script)'],
         playfair: ['var(--font-playfair)'],
       },

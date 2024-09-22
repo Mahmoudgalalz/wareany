@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { Dancing_Script, Playfair_Display } from 'next/font/google';
 import './globals.css';
+import { NavBar } from '@/components/nav-bar';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable}  ${dancingScript.variable} ${playfair.variable} antialiased`}
       >
+        <NavBar />
         {children}
       </body>
     </html>
